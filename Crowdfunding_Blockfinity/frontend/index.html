@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding DApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crowdfunding DApp</h1>
+
+        <!-- MetaMask Connection -->
+        <div id="metamaskConnection">
+            <button id="connectMetaMask">Connect MetaMask</button>
+        </div>
+
+        <!-- Campaign List -->
+        <div id="campaignsList">
+            <h2>All Campaigns</h2>
+            <div id="campaigns"></div>
+        </div>
+
+        <!-- Create Campaign Button (only visible after MetaMask is connected) -->
+        <div id="createCampaignButton">
+            <button id="createCampaign">Create Campaign</button>
+        </div>
+
+        <!-- Create Campaign Form (Hidden Initially) -->
+        <div id="createCampaignForm" class="form-container">
+            <h3>Create New Campaign</h3>
+            <input type="text" id="campaignTitle" placeholder="Campaign Title" />
+            <input type="text" id="campaignDetails" placeholder="Campaign Details" />
+            <input type="number" id="targetAmount" placeholder="Target Amount (ETH)" />
+            <input type="text" id="deadline" placeholder="Deadline (DD-MM-YYYY)" />
+            <button id="submitCampaign">Submit Campaign</button>
+        </div>
+
+        <!-- Contribute to Campaign (Hidden Initially) -->
+        <div id="contributeCampaignForm" class="form-container">
+            <h3>Contribute to a Campaign</h3>
+            <input type="text" id="contributeCampaignId" placeholder="Campaign ID" />
+            <input type="number" id="contributeAmount" placeholder="Amount (ETH)" />
+            <button id="submitContribution">Contribute</button>
+        </div>
+
+        <!-- Campaign Details (Hidden Initially) -->
+        <div id="campaignDetailsContainer" class="form-container">
+            <h3>Campaign Details</h3>
+            <pre id="campaignDetails"></pre>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
